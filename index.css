@@ -5,7 +5,7 @@ html {
 body {
   margin-left: 20px;
   margin-right: 20px;
-  background-image: url("./bg-mobile.png");
+  background-image: url("./bg_mobile.jpeg");
   background-repeat: no-repeat;
 }
 
@@ -14,6 +14,10 @@ body {
   margin-bottom: 62px;
   display: flex;
   justify-content: space-between;
+}
+
+.header span {
+  display: none;
 }
 
 .headerButton {
@@ -57,6 +61,7 @@ body {
   line-height: 36px;
   color: rgba(0, 0, 0, 0.4);
   padding-top: 9px;
+  padding-left: 16px;
 }
 
 .emailSubmit {
@@ -69,12 +74,77 @@ body {
   border-radius: 8px;
 }
 
+@media screen and (min-width: 1024px) {
+  body {
+    margin-left: 84px;
+    margin-right: 84px;
+    background-image: url("./bg_ipad.jpeg");
+    background-size: cover;
+  }
+
+  .header {
+    justify-content: flex-end;
+    gap: 40px;
+    margin-bottom: 86px;
+  }
+
+  .header span {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+  }
+
+  .header img {
+    display: none;
+  }
+
+  .title {
+    font-size: 56px;
+    line-height: 74px;
+    text-align: left;
+    margin-bottom: 20px;
+    max-width: 665px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+    margin-bottom: 20px;
+    max-width: 565px;
+  }
+
+  .emailButton {
+    padding: 6px;
+    max-width: 422px;
+  }
+
+  .emailInput {
+    font-size: 16px;
+    line-height: 36px;
+    padding-top: 15px;
+    padding-left: 21px;
+  }
+
+  .emailSubmit {
+    font-size: 16px;
+    line-height: 36px;
+    padding: 13px 18px;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   body {
     margin-left: 122px;
     margin-right: 122px;
-    background-image: url("./bg-desktop.png");
-    background-size: cover;
+    background-image: url("./bg_desktop.jpeg");
+  }
+
+  .header {
+    gap: 40px;
+    margin-bottom: 125px;
   }
 
   .title {
@@ -88,6 +158,20 @@ body {
     font-size: 20px;
     font-weight: 400;
     line-height: 36px;
-    text-align: left;
+    max-width: 650px;
+    margin-bottom: 50px;
+  }
+
+  .emailButton {
+    max-width: 502px;
+  }
+
+  .emailInput {
+    padding-top: 13px;
+    padding-left: 26px;
+  }
+
+  .emailSubmit {
+    padding: 13px 38px;
   }
 }
